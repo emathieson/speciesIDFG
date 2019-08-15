@@ -244,7 +244,7 @@ const app = new Vue ({
 			factA: "placeHolder",
 			conservation: "placeHolder",
 			wildlife: "placeHolder",
-			speciesImage: "placeHolder"}
+			speciesImage: speciesImage}
 		
 		},
 
