@@ -1,4 +1,4 @@
-speciesImage = null;
+speciesImage = 'null';
 armadillo = {
 			commonName:"Armadillo",
 			scientificName:"Dasypus novemcinctus",
