@@ -186,7 +186,7 @@ td {
 }
 
 .btnb {
-  background: url('https://github.com/emathieson/speciesq/blob/master/img/index/bird.JPG?raw=true');
+  background: url(./img/index/bird.jpg);
   color: #e5e2db;
   text-align: center;
   font-size: 26px;
