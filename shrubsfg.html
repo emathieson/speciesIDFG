@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Shrubs Field Guide</title>
+
+		<!--Vue Scripts-->
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+
+		<!-- JS scripts-->
+		<script src="./js/shrubsFGApp.js" defer></script>
+		
+
+		<!--Bootstrap-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="./shrubsFGStyle.css" type="text/css">
+
+		<!-- font -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+	</head>
+
+	<body>
+		<div id="fieldGuideAll">
+	<!-- Vue App HTML Code-->
+			<br>
+
+	<!-- border box-->
+		<div class="container">
+			<div class="row justify-content-center">
+				<div id="box" class="col">
+				</div>
+			</div>
+		</div>
+
+	<!-- line break color -->
+		<div class="container">
+			<div class="row justify-content-center">
+				<div id="i" class="col">
+				</div>
+			</div>
+		</div>
+
+	<!-- "header" -->
+		<div class="container">
+			<div class="row justify-content-center">
+				<div id="fieldGuideHeader"class="col-2">
+					<button class="btn6" v-on:click="showSpeciesList()">FIELD GUIDE<br>SHRUB INDEX</button>
+				</div>
+
+				<div id="titleField"class="col-5">
+					<p id="titleField">S H R U B &nbsp; F I E L D &nbsp; G U I D E</p>
+				</div>
+
+				<div id="fieldGuideHeader"class="col-2">
+					  <a href="./shrubsid.html" ><button class="btn6">BACK TO QUIZ</button></a>
+				</div>
+			</div>
+		</div>
+
+	<!-- line break color -->
+		<div class="container">
+			<div class="row justify-content-center">
+				<div id="i" class="col">
+				</div>
+			</div>
+		</div>
+
+		<!--border box-->
+		<div class="container">
+			<div class="row justify-content-center" id="borderBox">
+			</div>
+		</div>
+
+		<!-- FIELD GUIDE SPECIES INFO HIDDEN -->
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col"  id="speciesInfo">
+					<div class="row justify-content-center">
+						<div class="col" id="namesArea">
+							<h5>COMMON NAME</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;{{species.commonName}}</p>
+							<h5>SCIENTIFIC NAME</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;{{species.scientificName}}</p>
+							<h5>RANGE</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;{{species.range}}</p>
+						</div>
+						<div class="col" id="image">
+							<img :src="speciesImage">
+						</div>
+				</div>
+					<div class="row justify-content-center">
+						<div class="col" id="factsArea">
+							<h5>I ATTRACT</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;{{species.attract}}</p>
+							<h5>FACTS</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;{{species.factA}}</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;{{species.factB}}</p>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- advance buttons -->
+	<div class="container" id="navButtons">
+		<div class="row justify-content-center">
+			<div class="col">
+				<button class="btn8L"id="nav" v-on:click= "prevSpecies()"> < < </button>
+			</div>
+			<div class= "col" id="empty">
+			</div>
+			<div class="col">
+				<button class="btn8R" id="nav" v-on:click= "nextSpecies()"> > > </button>
+			</div>
+		</div>
+	</div>
+
+	<!-- "SPECIES LIST box"-->
+		<div class="container">
+			<div class="row justify-content-center">
+				<div id="fieldGuideSpeciesList" class="row">
+					<div id = "lists" class = "col">
+					<ul class = fGList>
+						<li id="bearberry" v-on:click="hideSpeciesList(), selectBearberry()">&nbsp;BEARBERRY</li>
+						<li id="blueberry" v-on:click="hideSpeciesList(), selectBlueberry()">&nbsp;BLUEBERRY</li>
+						<li id="cinquefoil" v-on:click="hideSpeciesList(), selectCinquefoil()">&nbsp;CINQUEFOIL</li>
+						<li id="currant" v-on:click="hideSpeciesList(), selectCurrant()">&nbsp;CURRANT</li>
+						<li id="dogwood" v-on:click="hideSpeciesList(), selectDogwood()">&nbsp;DOGWOOD</li>
+						<li id="elderberry" v-on:click="hideSpeciesList(), selectElderberry()">&nbsp;ELDERBERRY</li>
+						<li id="lilac" v-on:click="hideSpeciesList(), selectLilac()">&nbsp;LILAC</li>
+					</ul>
+				</div>
+				<div id = "lists" class = "col">
+					<ul class = fGList>
+						<li id="oregongrape" v-on:click="hideSpeciesList(), selectOregonGrape()">&nbsp;OREGON GRAPE</li>
+						<li id="poisonoak" v-on:click="hideSpeciesList(), selectPoisonOak()">&nbsp;POISON OAK</li>
+						<li id="pricklypear" v-on:click="hideSpeciesList(), selectPricklyPear()">&nbsp;PRICKLY PEAR</li>
+						<li id="rhododendron" v-on:click="hideSpeciesList(), selectRhododendron()">&nbsp;RHODODENDRON</li>
+			            <li id="rose" v-on:click="hideSpeciesList(), selectRose()">&nbsp;ROSE</li>
+			            <li id="sagebrush" v-on:click="hideSpeciesList(), selectSagebrush()">&nbsp;SAGEBRUSH</li>
+			            <li id="saguarocactus" v-on:click="hideSpeciesList(), selectSaguaroCactus()">&nbsp;SAGUARO CACTUS</li>
+			        </ul>
+			    </div>
+				<div id = "lists" class = "col">
+					<ul class = fGList> 
+			            <li id="serviceberry" v-on:click="hideSpeciesList(), selectServiceberry()">&nbsp;SERVICEBERRY</li>
+			            <li id="spirea" v-on:click="hideSpeciesList(), selectSpirea()">&nbsp;SPIREA</li>
+			            <li id="viburnum" v-on:click="hideSpeciesList(), selectViburnum()">&nbsp;VIBURNUM</li>
+			            <li id="willow" v-on:click="hideSpeciesList(), selectWillow()">&nbsp;WILLOW</li>
+			            <li id="winterberry" v-on:click="hideSpeciesList(), selectWinterberry()">&nbsp;WINTERBERRY</li>
+			          </ul>
+			      </div>
+				</div>
+			</div>
+		</div>
+
+
+	<!-- line break color -->
+		<div class="container">
+			<div class="row justify-content-center">
+				<div id="i" class="col">
+				</div>
+			</div>
+		</div>
+
+  <!-- "bottom FIELD GUIDE menu area" -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div id="bottomMenu" class="col">
+          <a href="./grassesflowersfg.html"><button class="btn7" >G & F</button></a>&nbsp;
+          <a href="./shrubsfg.html"><button class="btn7" >S H R U B S</button></a>&nbsp;
+          <a href="./treefg.html"><button class="btn7" >T R E E S</button></a>&nbsp;
+          <a href="./birdfg.html"><button class="btn7R" >B I R D S</button></a>&nbsp;
+          <a href="./herpfg.html"><button class="btn7R" >H E R P S</button></a>&nbsp;
+          <a href="./mammalfg.html"><button class="btn7R" >M A M M A L S</button></a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- alert box -->
+  <div class="alert">
+    <div class="row justify-content-center">
+      <div class="col" id="alertText">
+        <br><br><br><br><br>
+          <h6>Please maximize your browser to continue!</h6>
+          <br>
+          <p>Thank you!</p>
+      </div>
+    </div>
+  </div>
+
+  </body>
+</html>

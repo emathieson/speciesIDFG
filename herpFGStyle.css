@@ -1,0 +1,408 @@
+.alert {
+	display: none;
+}
+
+@media screen and (max-width: 990px), (max-height: 600px) {
+  .alert {
+  	z-index: 20;
+  	background-color: #878b7b;
+	position: absolute;
+	top:0;
+	bottom:0;
+	left: 0;
+	right:0;
+	margin: auto;
+	display: inline-block;
+	width:1000px;
+  }
+}
+
+#alertText {
+	text-align: center;
+	margin: auto;
+	letter-spacing: 5px;
+	color: #e5e2db;
+	font-size: 20px;
+	text-shadow: 0px 2px 2px #3a3d32;
+}
+
+h6 {
+	font-size: 25px;
+	letter-spacing: 4px;
+	color: #e5e2db;
+	text-shadow: 0px 2px 2px #3a3d32;
+}
+
+.container {
+	text-align: center;
+	min-width: 840px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+body {
+  background-color: #878b7b;
+  min-width: 840px;
+}
+
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+img {
+	border-radius: 2px; 
+}
+
+#i {
+	background-color: #3a3d32;
+	color: #D9D0BF;
+	height: 10px;
+	min-width: 830px;
+	max-width: 830px
+}
+
+#fieldGuideAll {
+	z-index: -10;
+	position: absolute;
+	top:0;
+	bottom:0;
+	left: 0;
+	right:0;
+	margin: auto;
+	display:inline-block;
+}
+
+ul.fGList {
+	max-height: 390px;
+	min-height: 390px;
+	margin-top: 5px;
+	list-style-type: none;
+  	padding: 1px;
+  	padding-left: 15px;
+  	width: 340px;
+  	color: white;
+  	font-size: 16px;
+}
+
+ul.fGList li {
+	background: none;
+	margin: 4px;
+	padding: 10px;
+	border-radius: 6px;
+	letter-spacing: 1px;
+}
+
+ul.fGList li:hover {
+	color: #f5f3ed;
+	cursor: pointer;
+	font-weight:bold;
+	letter-spacing: 6px;
+	text-shadow: 0px 2px 1px black;
+}
+
+ul.fGList::-webkit-scrollbar {
+    display:none;
+}
+
+#bottomMenu {
+	background-color: #3a3d32;
+	min-width: 830px;
+	max-width: 830px;
+	height: 63px;
+	letter-spacing: 8px;
+	padding-top: 4px;
+	padding-bottom: 12px;
+	position: static;
+}
+
+#box {
+	position: fixed;
+	height: 548px;
+	z-index: -10;
+	background-color: #d3cec2;
+	min-width: 830px;
+	max-width: 830px;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+}
+
+#fieldGuideHeader {
+	background-color: #3a3d32;
+	color: #D9D0BF;
+	height: 56px;
+	min-width: 258px;
+	max-width: 258px;
+	padding: 5px 0;
+	letter-spacing: 8px;
+}
+
+#titleField {
+	background-color: #3a3d32;
+	color: #d3cec2;
+	font-size: 18px;
+	letter-spacing: 3px;
+	height: 56px;
+	min-width: 314px;
+	max-width: 314px;
+	padding: 7px 0;
+	text-shadow: 0px 4px 3px black;
+	font-weight: bold;
+}
+
+#fieldGuideSpeciesList {
+	padding: 9px;
+	z-index: 8;
+	position: static;
+	min-width: 830px;
+	max-width: 830px;
+	height: 409px;
+	background-color: #55594a;
+	/*background: url('./img/trees/alder.jpg');*/
+	border-left: solid 20px #3a3d32;	
+	border-right: solid 20px #3a3d32;
+	box-shadow:inset 0 0 0 4px #5f8875;
+}
+
+#speciesInfo {
+	z-index: 5;
+	color: #d3cec2;
+	position: fixed;
+	padding-left: 10px;
+	padding-top: 10px;
+	min-width: 790px;
+	max-width: 790px;
+	height: 409px;
+	background-color: #55594a;
+	border: solid 4px #5f8875;
+	/*box-shadow:inset 0 0 0 4px #c5ce8b;*/
+	text-align: left;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+#namesArea {
+	padding-left: 21px;
+	font-size: 13px;
+	height: 200px;
+}
+
+#factsArea {
+	padding-top: 0px;
+	padding-left: 21px;
+	padding-right: 15px;
+	color: #d3cec2;
+	font-size: 13px;
+	height: 178px;
+	min-width: 780px;
+	max-width:780px;
+}
+
+h5 {
+	font-size: 14px;
+	letter-spacing: 4px;
+	color: #77a891;
+	text-shadow: 0px 2px 2px black;
+}
+
+#image {
+	text-align:center; !important
+}
+
+img {
+	border-radius: 8px;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* top menu buttons*/
+.btn6 {
+  background-color: #3a3d32;
+  color: #d3cec2;
+  text-align: center;
+  font-size: 12px;
+  height: 88%;
+  width: 120px;
+  transition: all ease 0.7s;
+  border: solid 2px;
+  border-color: #47796f;
+  border-radius: 2px;
+  cursor: pointer;
+  margin: 4px;
+  letter-spacing: 3px;
+}
+
+.btn6:hover {
+  	color: #3a3d32;
+  	box-shadow: inset 0 50px 0 0 #e5e2db;
+  	border-color: #d3cec2;
+  	font-weight: bold;
+}
+
+/* bottom menu buttons */
+.btn7 {
+  background-color: #3a3d32;
+  color: #d3cec2;
+  text-align: center;
+  font-size: 12px;
+  height: 41px;
+  width: 100px;
+  transition: all ease 0.7s;
+  border: solid 2px;
+  border-color: #47796f;
+  border-radius: 2px;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.btn7:hover {
+	color: #3a3d32;
+  	box-shadow: inset 110px 0 0 0 #d3cec2;
+  	border-color: #d3cec2;
+  	font-weight: bold;
+}
+
+.btn7R {
+  background-color: #3a3d32;
+  color: #d3cec2;
+  text-align: center;
+  font-size: 12px;
+  height: 41px;
+  width: 100px;
+  transition: all ease 0.7s;
+  border: solid 2px;
+  border-color: #47796f;
+  border-radius: 2px;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.btn7R:hover {
+	color: #3a3d32;
+  	box-shadow: inset -110px 0 0 0 #d3cec2;
+  	border-color: #d3cec2;
+  	font-weight: bold;
+}
+
+#alligator:hover	{
+	background-image: url("./img/herps/list/alligator.jpg");
+}
+
+#boxturtle:hover	{
+	background-image: url("./img/herps/list/boxturtle.jpg");
+}
+
+#bullfrog:hover	{
+	background-image: url("./img/herps/list/bullfrog.jpg");
+}
+
+#copperhead:hover	{
+	background-image: url("./img/herps/list/copperhead.jpg");
+}
+
+#fencelizard:hover	{
+	background-image: url("./img/herps/list/fencelizard.jpg");
+}
+
+#gartersnake:hover	{
+	background-image: url("./img/herps/list/gartersnake.jpg");
+}
+
+#hornedtoad:hover	{
+	background-image: url("./img/herps/list/hornedtoad.jpg");
+}
+
+#iguana:hover	{
+	background-image: url("./img/herps/list/iguana.jpg");
+}
+
+#kingsnake:hover	{
+	background-image: url("./img/herps/list/kingsnake.jpg");
+}
+
+#newt:hover	{
+	background-image: url("./img/herps/list/newt.jpg");
+}
+
+#rattlesnake:hover	{
+	background-image: url("./img/herps/list/rattlesnake.jpg");
+}
+
+#salamander:hover	{
+	background-image: url("./img/herps/list/salamander.jpg");
+}
+
+#skink:hover	{
+	background-image: url("./img/herps/list/skink.jpg");
+}
+
+#snappingturtle:hover	{
+	background-image: url("./img/herps/list/snappingturtle.jpg");
+}
+
+#treefrog:hover	{
+	background-image: url("./img/herps/list/treefrog.jpg");
+}
+
+#navButtons {
+	z-index: 6;
+	min-width: 830px;
+	max-width: 830px;
+	position: absolute;
+	top:338px;
+	bottom:0;
+	left: 0;
+	right:0;
+	margin: auto;
+	display:inline-block;
+	height: 30px;
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	line-height: 4px;
+}
+
+#empty {
+	min-width: 600px;
+	max-width: 600px;
+}
+
+.btn8L {
+  background-color: #3a3d32;
+  color: #d3cec2;
+  text-align: center;
+  font-size: 18px;
+  height: 30px;
+  width: 50px;
+  transition: all ease 0.7s;
+  border: solid 2px;
+  border-color: #47796f;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.btn8L:hover {
+	color: #47796f;
+  	box-shadow: inset -60px 0 0 0 #d3cec2;
+  	border-color: #d3cec2;
+  	font-weight: bold;
+}
+
+.btn8R {
+  background-color: #3a3d32;
+  color: #d3cec2;
+  text-align: center;
+  font-size: 18px;
+  height: 30px;
+  width: 50px;
+  transition: all ease 0.7s;
+  border: solid 2px;
+  border-color: #47796f;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.btn8R:hover {
+	color: #47796f;
+  	box-shadow: inset 60px 0 0 0 #d3cec2;
+  	border-color: #d3cec2;
+  	font-weight: bold;
+}

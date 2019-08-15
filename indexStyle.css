@@ -1,0 +1,256 @@
+.alert {
+  display: none;
+}
+
+@media screen and (max-width: 990px), (max-height: 600px) {
+  .alert {
+    z-index: 20;
+    background-color: #878b7b;
+  position: absolute;
+  top:0;
+  bottom:0;
+  left: 0;
+  right:0;
+  margin: auto;
+  display: inline-block;
+  width:1000px;
+  }
+}
+
+#alertText {
+  text-align: center;
+  margin: auto;
+  letter-spacing: 5px;
+  color: #e5e2db;
+  font-size: 20px;
+  text-shadow: 0px 2px 2px #3a3d32;
+}
+
+h5 {
+  font-size: 25px;
+  letter-spacing: 4px;
+  color: #e5e2db;
+  text-shadow: 0px 2px 2px #3a3d32;
+}
+
+.container {
+	text-align: center;
+	min-width: 800px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+body {
+  background-color: #878b7b;
+}
+
+* {
+	font-family: 'Roboto', sans-serif;
+
+}
+
+img {
+	border-radius: 2px; 
+}
+
+
+#titleArea {
+	background-color: #3a3d32;
+	color: #e5e2db;
+	font-size: 18px;
+	letter-spacing: 3px;
+	height: 75px;
+	min-width: 830px;
+	max-width: 830px;
+}
+
+#titleText{
+	margin: auto;
+	padding: 25px 0;
+	text-shadow: 0px 4px 3px black;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
+#buttonArea {
+	padding: 12px;
+	min-width: 830px;
+	max-width: 830px;
+	height: 410px;
+	background: #55594a;
+	border-left: solid 20px #3a3d32;
+	border-right: solid 20px #3a3d32;
+	box-shadow:inset 0 0 0 6px #e5e2db;
+}
+
+#box {
+	position: fixed;
+	height: 548px;
+	z-index: -1;
+	background-color: #e5e2db;
+	min-width: 830px;
+	max-width: 830px;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+}
+
+#h {
+	background-color: #3a3d32;
+	min-width: 830px;
+	max-width: 830px;
+	height: 73px;
+	color: #a8ae98;
+	padding: 10px;
+	font-size: 14px;
+}
+
+table {
+ 	width: 100%;
+ 	height: 100%;
+}
+
+td {
+	padding: 1px;
+}
+
+.btngf {
+  background: url('./img/index/grass.jpg');
+  color: #e5e2db;
+  text-align: center;
+  font-size: 24px;
+  height: 130px;
+  width: 210px;
+  transition: all ease 0.7s;
+  border: solid 3px;
+  border-color: #6e5767;
+  border-radius: 2px;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px black;
+  font-weight: bold;
+}
+
+.btngf:hover {
+	  color: #3a3d32;
+  	box-shadow: inset 0 -210px 0 0 rgba(255, 255, 255, 0.8);
+  	border-color: #e5e2db;
+  	text-shadow: none;
+}
+
+.btns {
+  background: url('./img/index/shrub.jpg');
+  color: #e5e2db;
+  text-align: center;
+  font-size: 26px;
+  height: 130px;
+  width: 210px;
+  transition: all ease 0.7s;
+  border: solid 3px;
+  border-color: #d1aa71;
+  border-radius: 2px;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px black;
+  font-weight: bold;
+}
+
+.btns:hover {
+	color: #3a3d32;
+  	box-shadow: inset 0 -210px 0 0 rgba(255, 255, 255, 0.8);
+  	border-color: #e5e2db;
+  	text-shadow: none;
+}
+
+.btnt {
+  background: url('./img/index/tree.jpg');
+  color: #e5e2db;
+  text-align: center;
+  font-size: 26px;
+  height: 130px;
+  width: 210px;
+  transition: all ease 0.7s;
+  border: solid 3px;
+  border-color: #718042;
+  border-radius: 2px;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px black;
+  font-weight: bold;
+}
+
+.btnt:hover {
+	color: #3a3d32;
+  	box-shadow: inset 0 -210px 0 0 rgba(255, 255, 255, 0.8);
+  	border-color: #e5e2db;
+  	text-shadow: none;
+}
+
+.btnb {
+  background: url('https://github.com/emathieson/speciesq/blob/master/img/index/bird.JPG?raw=true');
+  color: #e5e2db;
+  text-align: center;
+  font-size: 26px;
+  height: 130px;
+  width: 210px;
+  transition: all ease 0.7s;
+  border: solid 3px;
+  border-color: #3a626c;
+  border-radius: 2px;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px black;
+  font-weight: bold;
+}
+
+.btnb:hover {
+	color: #3a3d32;
+  	box-shadow: inset 0 -210px 0 0 rgba(255, 255, 255, 0.8);
+  	border-color: #e5e2db;
+  	text-shadow: none;
+}
+
+.btnh {
+  background: url('./img/index/herp.jpg');
+  color: #e5e2db;
+  text-align: center;
+  font-size: 26px;
+  height: 130px;
+  width: 210px;
+  transition: all ease 0.7s;
+  border: solid 3px;
+  border-color: #47796f;
+  border-radius: 2px;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px black;
+  font-weight: bold;
+}
+
+.btnh:hover {
+	color: #3a3d32;
+  	box-shadow: inset 0 -210px 0 0 rgba(255, 255, 255, 0.8);
+  	border-color: #e5e2db;
+  	font-weight: bold;
+  	text-shadow: none;
+}
+
+.btnm {
+  background: url('./img/index/mammal.jpg');
+  color: #e5e2db;
+  text-align: center;
+  font-size: 26px;
+  height: 130px;
+  width: 210px;
+  transition: all ease 0.7s;
+  border: solid 3px;
+  border-color: #ad8b3f;
+  border-radius: 2px;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px black;
+  font-weight: bold;
+}
+
+.btnm:hover {
+	color: #3a3d32;
+  	box-shadow: inset 0 -210px 0 0 rgba(255, 255, 255, 0.8);
+  	border-color: #e5e2db;
+  	text-shadow: none;
+}

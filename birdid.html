@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bird ID Quiz</title>
+
+    <!--Vue Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+
+    <!-- JS scripts-->
+    <script src="./js/birdApp.js" defer></script>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/birdStyle.css" type="text/css">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div id="app">
+  <!-- Vue App HTML Code-->
+      <br>
+
+  <!-- border box-->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div id="box" class="col">
+        </div>
+      </div>
+    </div>
+          
+  <!-- line break color -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div id="i" class="col">
+        </div>
+      </div>
+    </div>
+
+  <!-- "header" -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div id="a"class="col-2">
+          <button class="btn1" v-on:click= "resetBird(), randomBird(), resetLi()">C H O O S E<br> R A N D O M</button>
+          <button class="btn1" v-on:click= "resetBird(), resetLi()">R E S E T<br>Q U I Z</button>
+        </div>
+
+        <div id="b"class="col-5">
+          <p id="titleText">{{ title }} </p>
+        </div>
+
+        <div id="a"class="col-2">
+          <button class="btn1" v-on:click= "resetBird(), birdMenuSelect(), resetLi()">S E L E C T <br> B I R D</button>
+          <a href="./birdfg.html"><button class="btn1" >F I E L D<br>G U I D E</button></a>
+        </div>
+      </div>
+    </div>
+
+  <!-- line break color -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div id="i" class="col">
+        </div>
+      </div>
+    </div>
+
+  <!-- "hidden box speciesSelect"-->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col"  id="speciesSelectMenu">
+          <table>
+          <tbody>
+            <tr>
+              <td><button class="btn2" v-on:click="setB14()"><img src='./img/birds/thumbnail/bluebird.jpg'></button></td>
+              <td><button class="btn2" v-on:click="setB13()"><img src='./img/birds/thumbnail/bluejay.jpg'></button></td>
+              <td><button class="btn2" v-on:click="setB20()"><img src='./img/birds/thumbnail/canadiangoose.jpg'></button></td>
+              <td><button class="btn2" v-on:click="setB23()"><img src='./img/birds/thumbnail/chickadee.jpg'></button></td>
+              <td><button class="btn2" v-on:click="setB3()"><img src='./img/birds/thumbnail/eagle.jpg'></button></td>
+            </tr>
+            <tr>
+              <td><button class="btn2" v-on:click="setB12()"><img src='./img/birds/thumbnail/egret.jpg'></button></td>
+              <td><button class="btn2" v-on:click="setB5()"><img src='./img/birds/thumbnail/falcon.jpg'></button></td>
+              <td><button class="btn2" v-on:click="setB22()"><img src='./img/birds/thumbnail/grouse.jpg'></button></td>
+              <td><button class="btn2" v-on:click="setB6()"><img src='./img/birds/thumbnail/hawk.jpg'></button></td>
+              <td><button class="btn2" v-on:click="setB10()"><img src='./img/birds/thumbnail/heron.jpg'></button></td>
+            </tr>
+            <tr>
+              <td><button class="btn2" v-on:click="setB17()"><img src='./img/birds/thumbnail/hummingbird.jpg'></button></td>
+              <td><button class="btn2" v-on:click="setB8()"><img src='./img/birds/thumbnail/loon.jpg'></button></td>
+              <td><button class="btn2" v-on:click="setB9()"><img src='./img/birds/thumbnail/mallardduck.jpg'></button></td>
+              <td><button class="btn2" v-on:click="setB16()"><img src='./img/birds/thumbnail/nuthatch.jpg'></button></td>
+              <td><button class="btn2" v-on:click="setB2()"><img src='./img/birds/thumbnail/owl.jpg'></button></td>
+            </tr>
+            <tr>
+              <td><button class="btn2" v-on:click="setB7()"><img src='./img/birds/thumbnail/pelican.jpg'></button></td>
+              <td><button class="btn2" v-on:click="setB25()"><img src='./img/birds/thumbnail/pigeon.jpg'></button></td>
+              <td><button class="btn2" v-on:click="setB1()"><img src='./img/birds/thumbnail/roadrunner.jpg'></button></td>
+              <td><button class="btn2" v-on:click="setB24()"><img src='./img/birds/thumbnail/robin.jpg'></button></td>
+              <td><button class="btn2" v-on:click="setB21()"><img src='./img/birds/thumbnail/sparrow.jpg'></button></td>
+            </tr>
+            <tr>
+              <td><button class="btn2" v-on:click="setB15()"><img src='./img/birds/thumbnail/swallow.jpg'></button></td>
+              <td><button class="btn2" v-on:click="setB11()"><img src='./img/birds/thumbnail/swan.jpg'></button></td>
+              <td><button class="btn2" v-on:click="setB4()"><img src='./img/birds/thumbnail/vulture.jpg'></button></td>
+              <td><button class="btn2" v-on:click="setB18()"><img src='./img/birds/thumbnail/warbler.jpg'></button></td>
+              <td><button class="btn2" v-on:click="setB19()"><img src='./img/birds/thumbnail/woodpecker.jpg'></button></td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  <!-- "hidden box answerResults"-->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col"  id="answerResultsMenu">
+          <h3> {{ quizResult }} </h3>
+          <h4 id="quizResultText"></h4>
+          <img :src="speciesImage"></img>
+            <br>
+            <br>
+          <button id="tryAgain" class="btn5" v-on:click="resetBird(), resetLi()">TRY AGAIN</button></td>
+          <button class="btn5" v-on:click="randomBird(), resetLi()">NEW<br>RANDOM</button>
+          <button class="btn5" v-on:click="birdMenuSelect(), resetLi()">SELECT<br>NEW</button>
+          <a href="./index.html"><button class="btn5" >GROUP<br>SELECT</button></a>
+          <a href="./birdfg.html"><button class="btn5" id="fieldGuideButtonA">FIELD<br>GUIDE</button></a>
+        </div>
+      </div>
+    </div>
+
+  <!-- "main box"-->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div id="c" class="col">
+          <img :src="speciesImage" id="spImg"></img>
+            <br>
+        </div>
+
+        <div id="d" class="col">
+          <ul>
+            <li id="li14" v-on:click="chooseLi14(), checkAnswer()">&nbsp;BLUEBIRD</li>
+            <li id="li13" v-on:click="chooseLi13(), checkAnswer()">&nbsp;BLUE JAY</li>
+            <li id="li20" v-on:click="chooseLi20(), checkAnswer()">&nbsp;CANADIAN GOOSE</li>
+            <li id="li23" v-on:click="chooseLi23(), checkAnswer()">&nbsp;CHICKADEE</li>
+            <li id="li3" v-on:click="chooseLi3(), checkAnswer()">&nbsp;EAGLE</li>
+            <li id="li12" v-on:click="chooseLi12(), checkAnswer()">&nbsp;EGRET</li>
+            <li id="li5" v-on:click="chooseLi5(), checkAnswer()">&nbsp;FALCON</li>
+            <li id="li22" v-on:click="chooseLi22(), checkAnswer()">&nbsp;GROUSE</li>
+            <li id="li6" v-on:click="chooseLi6(), checkAnswer()">&nbsp;HAWK</li>
+            <li id="li10" v-on:click="chooseLi10(), checkAnswer()">&nbsp;GREAT BLUE HERON</li>
+            <li id="li17" v-on:click="chooseLi17(), checkAnswer()">&nbsp;HUMMINGBIRD</li>
+            <li id="li8" v-on:click="chooseLi8(), checkAnswer()">&nbsp;LOON</li>
+            <li id="li9" v-on:click="chooseLi9(), checkAnswer()">&nbsp;MALLARD DUCK</li>
+            <li id="li16" v-on:click="chooseLi16(), checkAnswer()">&nbsp;NUTHATCH</li>
+            <li id="li2" v-on:click="chooseLi2(), checkAnswer()">&nbsp;OWL</li>
+            <li id="li7" v-on:click="chooseLi7(), checkAnswer()">&nbsp;PELICAN</li>
+            <li id="li25" v-on:click="chooseLi25(), checkAnswer()">&nbsp;PIGEON</li>
+            <li id="li1" v-on:click="chooseLi1(), checkAnswer()">&nbsp;ROADRUNNER</li>
+            <li id="li24" v-on:click="chooseLi24(), checkAnswer()">&nbsp;ROBIN</li>
+            <li id="li21" v-on:click="chooseLi21(), checkAnswer()">&nbsp;SPARROW</li>
+            <li id="li15" v-on:click="chooseLi15(), checkAnswer()">&nbsp;SWALLOW</li>
+            <li id="li11" v-on:click="chooseLi11(), checkAnswer()">&nbsp;SWAN</li>
+            <li id="li4" v-on:click="chooseLi4(), checkAnswer()">&nbsp;VULTURE</li>
+            <li id="li18" v-on:click="chooseLi18(), checkAnswer()">&nbsp;WARBLER</li>
+            <li id="li19" v-on:click="chooseLi19(), checkAnswer()">&nbsp;WOODPECKER</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  <!-- line break color -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div id="i" class="col">
+        </div>
+      </div>
+    </div>
+
+  <!-- question quide area -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div id="k"class="col">
+        </div>
+
+        <div id="l"class="col"> <!--blank space-->
+          <br>
+          <p>Please answer the question below:</p>
+        </div>
+
+        <div id="m"class="col">
+        </div>
+        
+      </div>  
+    </div>  
+
+  <!-- "questions area"-->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div id="e"class="col">
+          <button class="btn3" v-on:click="buttonA(), updateQuestion(), checkAnswer()">{{ answerA }}</button>
+        </div>
+
+        <div id="f"class="col">
+          <p id="fText">{{ question }}</p>
+        </div>
+
+        <div id="fHidden"class="col">
+        </div>
+
+        <div id="g"class="col">
+          <button class="btn3" v-on:click="buttonB(), updateQuestion(), checkAnswer()">{{ answerB }}</button>
+          </div>
+      </div>
+    </div> 
+
+  <!-- line break color bottom -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div id="n" class="col">
+        </div>
+      </div>
+    </div>
+
+  <!-- "bottom menu area" -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div id="h" class="col">
+          <a href="./grassesflowersid.html"><button class="btn4" >G & F</button></a>&nbsp;
+          <a href="./shrubsid.html"><button class="btn4" >S H R U B S</button></a>&nbsp;
+          <a href="./treeid.html"><button class="btn4" >T R E E S</button></a>&nbsp;
+          <a href="./birdid.html"><button class="btn4R" >B I R D S</button></a>&nbsp;
+          <a href="./herpsid.html"><button class="btn4R" >H E R P S</button></a>&nbsp;
+          <a href="./mammalid.html"><button class="btn4R" >M A M M A L S</button></a>
+        </div>
+      </div>
+    </div>
+
+<!-- alert box -->
+  <div class="alert">
+    <div class="row justify-content-center">
+      <div class="col" id="alertText">
+        <br><br><br><br><br>
+          <h5>Please maximize your browser to continue!</h5>
+          <br>
+          <p>Thank you!</p>
+      </div>
+    </div>
+  </div>
+
+  </body>
+</html>

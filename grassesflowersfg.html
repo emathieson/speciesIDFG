@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Grasses & Flowers Field Guide</title>
+
+		<!--Vue Scripts-->
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+
+		<!-- JS scripts-->
+		<script src="./js/grassflowerFGApp.js" defer></script>
+		
+
+		<!--Bootstrap-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="./grassflowerFGStyle.css" type="text/css">
+
+		<!-- font -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+	</head>
+	<body>
+
+		<div id="fieldGuideAll">
+	<!-- Vue App HTML Code-->
+			<br>
+
+	<!-- border box-->
+		<div class="container">
+			<div class="row justify-content-center">
+				<div id="box" class="col">
+				</div>
+			</div>
+		</div>
+
+	<!-- line break color -->
+		<div class="container">
+			<div class="row justify-content-center">
+				<div id="i" class="col">
+				</div>
+			</div>
+		</div>
+
+	<!-- "header" -->
+		<div class="container">
+			<div class="row justify-content-center">
+				<div id="fieldGuideHeader"class="col-2">
+					<button class="btn6" v-on:click="showSpeciesList()">FIELD GUIDE<br>G & F INDEX</button>
+				</div>
+
+				<div id="titleField"class="col-5">
+					<p id="titleField">G R A S S E S &nbsp;& &nbsp; F L O W E R S <br> F I E L D &nbsp; G U I D E</p>
+				</div>
+
+				<div id="fieldGuideHeader"class="col-2">
+					
+					<a href="./grassesflowersid.html" ><button class="btn6">BACK TO QUIZ</button></a>
+				</div>
+			</div>
+		</div>
+
+	<!-- line break color -->
+		<div class="container">
+			<div class="row justify-content-center">
+				<div id="i" class="col">
+				</div>
+			</div>
+		</div>
+
+	<!--border box-->
+		<div class="container">
+			<div class="row justify-content-center" id="borderBox">
+			</div>
+		</div>
+
+	<!-- FIELD GUIDE SPECIES INFO HIDDEN -->
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col"  id="speciesInfo">
+					<div class="row justify-content-center">
+						<div class="col" id="namesArea">
+							<h5>COMMON NAME</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;{{species.commonName}}</p>
+							<h5>SCIENTIFIC NAME</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;{{species.scientificName}}</p>
+							<h5>RANGE</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;{{species.range}}</p>
+						</div>
+						<div class="col" id="image">
+							<img :src="speciesImage">
+						</div>
+				</div>
+					<div class="row justify-content-center">
+						<div class="col" id="factsArea">
+							<h5>I ATTRACT</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;{{species.attract}}</p>
+							<h5>FACTS</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;{{species.factA}}</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;{{species.factB}}</p>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- advance buttons -->
+	<div class="container" id="navButtons">
+		<div class="row justify-content-center">
+			<div class="col">
+				<button class="btn8L"id="nav" v-on:click= "prevSpecies()"> < < </button>
+			</div>
+			<div class= "col" id="empty">
+			</div>
+			<div class="col">
+				<button class="btn8R" id="nav" v-on:click= "nextSpecies()"> > > </button>
+			</div>
+		</div>
+	</div>
+
+	<!-- "SPECIES LIST box"-->
+		<div class="container">
+			<div class="row justify-content-center">
+				<div id="fieldGuideSpeciesList" class="row">
+					<div id = "lists" class = "col">
+					<ul class = fGList>
+						<li id="bluebell" v-on:click="hideSpeciesList(), selectBluebell()">&nbsp;BLUEBELL</li>
+						<li id="buffalograss" v-on:click="hideSpeciesList(), selectBuffaloGrass()">&nbsp;BUFFALO GRASS</li>
+						<li id="buttercup" v-on:click="hideSpeciesList(), selectButtercup()">&nbsp;BUTTERCUP</li>
+						<li id="cattail" v-on:click="hideSpeciesList(), selectCattail()">&nbsp;CATTAIL</li>
+						<li id="daffodil" v-on:click="hideSpeciesList(), selectDaffodil()">&nbsp;DAFFODIL</li>
+						<li id="daisy" v-on:click="hideSpeciesList(), selectDaisy()">&nbsp;DAISY</li>
+						<li id="dandelion" v-on:click="hideSpeciesList(), selectDandelion()">&nbsp;DANDELION</li>
+						<li id="fern" v-on:click="hideSpeciesList(), selectFern()">&nbsp;FERN</li>
+					</ul>
+				</div>
+				<div id = "lists" class = "col">
+					<ul class = fGList>
+						<li id="fireweed" v-on:click="hideSpeciesList(), selectFireweed()">&nbsp;FIREWEED</li>
+						<li id="geranium" v-on:click="hideSpeciesList(), selectGeranium()">&nbsp;GERANIUM</li>
+						<li id="giantsunflower" v-on:click="hideSpeciesList(), selectGiantSunflower()">&nbsp;GIANT SUNFLOWER</li>
+						<li id="iceplant" v-on:click="hideSpeciesList(), selectIcePlant()">&nbsp;ICE PLANT</li>
+						<li id="iris" v-on:click="hideSpeciesList(), selectIris()">&nbsp;IRIS</li>
+						<li id="kentuckybluegrass" v-on:click="hideSpeciesList(), selectKentuckyBluegrass()">&nbsp;KENTUCKY BLUEGRASS</li>
+						<li id="lupine" v-on:click="hideSpeciesList(), selectLupine()">&nbsp;LUPINE</li>
+						<li id="paintbrush" v-on:click="hideSpeciesList(), selectPaintbrush()">&nbsp;PAINTBRUSH</li>
+					</ul>
+				</div>
+				<div id = "lists" class = "col">
+					<ul class = fGList>
+						<li id="poppy" v-on:click="hideSpeciesList(), selectPoppy()">&nbsp;POPPY</li>
+						<li id="sedge" v-on:click="hideSpeciesList(), selectSedge()">&nbsp;SEDGE</li>
+						<li id="shootingstar" v-on:click="hideSpeciesList(), selectShootingStar()">&nbsp;SHOOTING STAR</li>
+						<li id="thistle" v-on:click="hideSpeciesList(), selectThistle()">&nbsp;THISTLE</li>
+						<li id="venusflytrap" v-on:click="hideSpeciesList(), selectVenusFlytrap()">&nbsp;VENUS FLYTRAP</li>
+						<li id="violet" v-on:click="hideSpeciesList(), selectViolet()">&nbsp;VIOLET</li>
+						<li id="waterhyacinth" v-on:click="hideSpeciesList(), selectWaterHyacinth()">&nbsp;WATER HYACINTH</li>
+						<li id="waterlily" v-on:click="hideSpeciesList(), selectWaterLily()">&nbsp;WATER LILY</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		</div>
+
+	<!-- line break color -->
+		<div class="container">
+			<div class="row justify-content-center">
+				<div id="i" class="col">
+				</div>
+			</div>
+		</div>
+
+  <!-- "bottom FIELD GUIDE menu area" -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div id="bottomMenu" class="col">
+          <a href="./grassesflowersfg.html"><button class="btn7" >G & F</button></a>&nbsp;
+          <a href="./shrubsfg.html"><button class="btn7" >S H R U B S</button></a>&nbsp;
+          <a href="./treefg.html"><button class="btn7" >T R E E S</button></a>&nbsp;
+          <a href="./birdfg.html"><button class="btn7R" >B I R D S</button></a>&nbsp;
+          <a href="./herpfg.html"><button class="btn7R" >H E R P S</button></a>&nbsp;
+          <a href="./mammalfg.html"><button class="btn7R" >M A M M A L S</button></a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- alert box -->
+  <div class="alert">
+    <div class="row justify-content-center">
+      <div class="col" id="alertText">
+        <br><br><br><br><br>
+          <h6>Please maximize your browser to continue!</h6>
+          <br>
+          <p>Thank you!</p>
+      </div>
+    </div>
+  </div>
+
+  </body>
+</html>
